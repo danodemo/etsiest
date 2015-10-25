@@ -1,0 +1,73 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <title>Etsy Ape</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <div class="pheader"> <!-- Etsy logo(inline), search bar and icons will go -->
+      <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Etsy_logo.png"> </div>
+      <div class="searchbar">
+        <form>
+          <input type="text" placeholder="Search..." required>
+          <input type="button" value="Search">
+          </form>
+      </div>
+
+    </div>
+
+      <div class="categories"> <!-- This is where the categories menu will go-->
+      <ul id="navbar">
+        <li><a href="#">Clothing & Accessories</a></li>
+        <li><a href="#">Jewelry</a></li>
+        <li><a href="#">Craft Supplies & Tools</a></li>
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Home & Living</a></li>
+        <li><a href="#">Kids & Baby</a></li>
+        <li><a href="#">Vintage</a></li>
+      </ul>
+    </div>
+    
+    <div class="sidemenu"><!-- This is where the side-menu will go --></div>
+      <h3 id="AllCats">All Categories</h3>
+      <ul id="sidemenu">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="resultsgrid"> <!-- This is the beginning of the results grid.  It is a self contained element that will list other elements inside of it in 3 columns -->
+      <div class="searchresults">
+        <% results.each do |result| %>
+          <div class="listing">
+              <img class="thumbnail" src="<%= result['Images'][0]['url_170x135'] %>">
+            <div class="listinfo">
+              <div class="title">
+                <%= result['title'] %></div>
+              <div class="shop">
+                <%= result['Shop']['shop_name'] %></div>
+              <div class="price">
+                <%= result['price'] %>  <%= result['currency_code'] %></div>
+            </div>
+          </div><!--end of listing class -->
+        <% end %> <!-- exits the block loop-->
+      </div> <!-- This is the end of the searchresults div -->
+    </div> <!-- This is the end of the resultsgrid class -->
+  </body>
+
+</html>
