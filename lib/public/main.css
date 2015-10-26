@@ -3,12 +3,30 @@ body {
   background-color: #F5F5F1;
 }
 
-ul  {
+div.sidemenu {
+  width: 20%;
+  height: auto;
+  background-color: white;
+  border-size: 1px;
+  border-style: solid;
+  border-color: #E1E3DF ;
+  float: left;
+}
+
+ul#menu {
   list-style-type: none;
+  font-size: 12px;
+}
+
+div.resultsgrid {
+  width: 66%;
+  float: left;
+  display: inline-block;
 }
 
 div.searchresults {
-  width: 66%;
+  width: 100%;
+  display: inline-block;
 }
 
 div.listing {
