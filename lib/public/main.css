@@ -3,6 +3,46 @@ body {
   background-color: #F5F5F1;
 }
 
+div.topbar {
+  width: 100%;
+  height:80px;
+  border-bottom: 1px solid #E1E3DF;
+  background-color: white;
+}
+
+div.topbar img {
+  max-width: 80px;
+  height: auto;
+  float: left;
+  vertical-align: center;
+  margin: 10px auto;
+}
+
+div.topbar form {
+  float: left;
+  margin: 10px auto;
+}
+
+div.categories {
+  height: 40px;
+  border-bottom: 1px solid #E1E3DF;
+  background-color: white;
+}
+
+ul#navbar {
+  margin: 0;
+}
+
+ul#navbar li {
+  display: inline;
+  float: center;
+}
+
+ul#navbar li a {
+  text-decoration: none;
+  color: #8C8C8C;
+}
+
 div.sidemenu {
   width: 20%;
   height: auto;
@@ -15,7 +55,12 @@ div.sidemenu {
 
 ul#menu {
   list-style-type: none;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+ul#menu li a {
+  text-decoration: none;
+  color: #0192B5;
 }
 
 div.resultsgrid {
